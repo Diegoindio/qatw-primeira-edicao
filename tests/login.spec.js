@@ -51,7 +51,9 @@ await page.getByRole('heading', {name: 'Verificação em duas etapas'})
  
  await loginPage.informa2FA(code)
 
-  expect(await dashPage.obterSaldo()).toHaveText('R$ 5.000,00')
+ await expect(await dashPage.obterSaldo()).toHaveText('R$ 5.000,00');
+
+//  expect(await dashPage.obterSaldo()).toHaveText('R$ 5.000,00')
 });
 
 
